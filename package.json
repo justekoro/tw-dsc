@@ -1,0 +1,19 @@
+{
+  "name": "tw-dsc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korobaka/tw-dsc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korobaka/tw-dsc/issues"
+  },
+  "homepage": "https://github.com/korobaka/tw-dsc#readme"
+}
