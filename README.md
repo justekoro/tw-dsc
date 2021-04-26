@@ -20,13 +20,17 @@ With tw-dsc, you can link a Discord account to a Twitch account.
 #### Usage
 
 1. Send t!link to your bot in DMS
+
 ![t!link](assets/link.png)
 
 2. A code will be given. Simply type it in the channel chat.
+
 ![code](assets/link_twitch.png)
 
 3. When your account has been linked, you receive a discord DM from the bot.
+
 ![discord dm](assets/linked.png)
 
 4. Type t!whoami command to check your linked account!
+
 ![whoami](assets/whoami.png)
