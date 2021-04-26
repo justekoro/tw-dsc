@@ -13,3 +13,9 @@ const Twitch = new t({
 
 Twitch.join(process.env.TW_USERNAME);
 
+// Init Discord
+
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+
+bot.login(process.env.DISCORD_TOKEN);
