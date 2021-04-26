@@ -59,6 +59,7 @@ bot.db = db;
 
 const t = require('twitch-bot');
 const channels = require('./data/channels.js');
+const twitchmsg = require('./twitch/events/msg.js');
 
 const Twitch = new t({
     username: process.env.TW_USERNAME, // Your twitch username
@@ -72,16 +73,7 @@ Twitch.on('join', (c) => {
 })
 
 Twitch.on('message', (chatter) => {
-    const c = bot.db.get(chatter.message);
-    console.log(c);
-    if (!c) return;
-    bot.db.delete(chatter.message);
-    bot.db.delete(c.id+".code")
-    delete chatter.message;
-    bot.db.set(c.id+".twitch", chatter);
-    Twitch.say("/me PogChamp "+chatter.username+" just linked his Discord account!");
-    bot.db.set(chatter.id, c.id);
-    bot.users.cache.get(c.id).send(":+1: You just linked your account to **"+chatter.username+"** !");
+    twitchmsg(Twitch, bot, chatter);
 })
 
 // fs.readdir("./twitch/events/", (err, files) => {
